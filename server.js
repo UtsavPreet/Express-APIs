@@ -30,29 +30,27 @@ router.use(function(req, res, next) {
 router.get('/hello/:name',function(req,res){
     res.send('Hello'+req.params.name);
 });
-// home page route (http://localhost:8080)
+
 router.get('/', function(req, res) {
     res.send('im the home page!');  
 });
 
-// about page route (http://localhost:8080/about)
+
 router.get('/about', function(req, res) {
     res.send('im the about page!'); 
 });
 
 app.route('/login')
-
-    // show the form (GET http://localhost:8080/login)
     .get(function(req, res) {
         res.sendFile(__dirname + '/public/views/login.html');
     })
-    // process the form (POST http://localhost:8080/login)
+
     .post(function(req, res) {
         console.log('processing');
         res.send('processing the login form!');
     });
 
-// apply the routes to our application
+
 app.use('/', router);
 
 
