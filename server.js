@@ -12,7 +12,13 @@ app.get('/api/users', function(req, res) {
 
   res.send(user_id + ' ' + token + ' ' + geo);
 });
+app.post('/api/users', function(req, res) {
+    var user_id = req.body.id;
+    var token = req.body.token;
+    var geo = req.body.geo;
 
+    res.send(user_id + ' ' + token + ' ' + geo);
+});
 
 app.listen(port);
 console.log('Server started! At http://localhost:' + port);
