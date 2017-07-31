@@ -16,14 +16,21 @@ Also used Nodemon to run the app.
 Just clone or download the folder and run npm install from your server file.
 Keep in mind the folder structure.
 
-###Folder Structure:-
+##Folder Structure:-
 
 node_modules
-package.json
-server.js (server file)
-public--------|css(consists all style files)
-              |js (consists of all user written JS)
-              |scripts (consists of JQuery)
-              |views (consists of all HTML files)
+server.js(Server file)
+public
+   ├── css
+   │   ├── style.css
+   │   └── style.less
+   ├── js
+   │   ├── base.js
+   │   └── index.js
+   ├── scripts
+   │   └── jquery.js
+   └── views
+       ├── index.html
+       └── login.html
 
 All the Best!!
